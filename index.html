@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Course Selling</title>
+    
+</head>
+<style>
+    @media screen and (max-width:1000px) {
+
+        header h1 {
+            text-align: center;
+            margin: 0 auto;
+            word-wrap: break-word;
+        }
+
+        script {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+    }
+
+    @media screen and (max-width:350px) {
+        body {
+            background-color: black;
+        }
+
+        header h1 {
+            font-size: 10px;
+        }
+
+
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Rowdies:wght@300;400;700&display=swap');
+
+    body {
+
+       
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1a1919;
+        color: #333;
+    }
+
+    header {
+        height: 100px;
+        background-color: #9b8404;
+        color: #d0f30a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Rowdies", sans-serif;
+        -webkit-text-stroke: 0.5px black;
+
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+    }
+
+
+
+
+    /* Main Container */
+    #courses-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .course {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        padding: 20px;
+        text-align: center;
+        width: 250px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .course:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .course img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .course h3 {
+        margin: 10px 0;
+        font-size: 1.5em;
+    }
+
+    .course button {
+        background-color: #3498db;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1em;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+    }
+
+    .course button:hover {
+        background-color: #2980b9;
+    }
+</style>
+
+<body>
+
+    <header>
+
+
+        <h1>Thanks for buy a course from Acedamy HUB</h1>
+
+    </header>
+    <main id="courses-container">
+        <!-- Courses will be dynamically inserted here -->
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const courses = [
+            { name: "Andrew Tate", img: "Andrew tate.jfif", link: "https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://mega.nz/folder/ZuMGQaYY%2523G2WH37RX_F5Hka5AgJlEpQ%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1726726110783796%26amp;usg%3DAOvVaw1CCCIxtPBo2SbSvJEbTzGH&sa=D&source=docs&ust=1726726110889636&usg=AOvVaw0Ii7SpwUKe2P32gPlOnagx" },
+            { name: "HBA services", img: "HBA services.jfif", link: "https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://drive.google.com/drive/folders/1-hrgVeDF0vYIlSd4ojwNMJJRh8WCgVG2?usp%253Ddrive_link%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1726726417270413%26amp;usg%3DAOvVaw3EjPDDFoIQjbzuJ4elfax0&sa=D&source=docs&ust=1726726417311451&usg=AOvVaw35VKWCLeny8ZI1BqWrTZFd" },
+            { name: "Anas Ali", img: "Anas ali.jfif", link: "https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://drive.google.com/drive/folders/1ENsdsKTSc-8rIRvgP0DQ6pQ7HJHYlXqa%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1726729723309375%26amp;usg%3DAOvVaw008bppABei9CHPuVuOwGUY&sa=D&source=docs&ust=1726729723370089&usg=AOvVaw2WHEItdDaIG62-rJLJj7mk" },
+            { name: "Duruv Rathee", img: "Duruv Rathee.jfif", link: "https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://mega.nz/folder/gDUnmTLL%2523aEUX4It48Wr6gyU_3VDE1g%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1726729723337489%26amp;usg%3DAOvVaw0vt2k7uh2QTikmoYyx-os-&sa=D&source=docs&ust=1726729723378097&usg=AOvVaw2UJpz6E46cJJdzh9C4KQK6" },
+            { name: "Ismail blogger", img: "Duruv Rathee.jfif", link: "https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://drive.google.com/drive/folders/1U8AyLP9hhWeZVeE7cF87owtnL2E6iOMx%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1726729723309842%26amp;usg%3DAOvVaw3pMzVd2RaxaQ3xp-Xyy5kX&sa=D&source=docs&ust=1726729723370200&usg=AOvVaw2FghDBuSJoOwpHcVcqFTo8" },
+            { name: "Talha reviews", img: "talha reviews.jfif", link: "https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://drive.google.com/drive/folders/1qwOa5_iisIbG-QBpEtppCg_lTAI1ZG3L%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1726729723310307%26amp;usg%3DAOvVaw2hEmZzyWGgVk8pNxrcqbE_&sa=D&source=docs&ust=1726729723370336&usg=AOvVaw1UWvYJiMyFffAiZKw5jT-e" },
+            { name: "Kashif Majeed", img: "kashif majeed.jfif", link: "https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://drive.google.com/drive/folders/1dTHieyM_TPvu47a2-87a90CUtJmG2NuQ%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1726726417266870%26amp;usg%3DAOvVaw0QyCxiB3xf5DX3XlGiMopy&sa=D&source=docs&ust=1726726417309926&usg=AOvVaw1opDDEjSWwaNv-nVmKcNKk" },
+            { name: "Shahid Anwar", img: "shahid anwar.jfif", link: "https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://drive.google.com/drive/folders/1aXPIoOg6Cc5pWf2bNaTb-3IpYsmG1Q05%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1726726417265112%26amp;usg%3DAOvVaw2ML4SOEMxph0SY_STfWReS&sa=D&source=docs&ust=1726726417309320&usg=AOvVaw2L_zTHbAGb87in_qXoHebs" },
+            { name: "Waqar Zaka", img: "waqar zaka.jfif", link: "https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://drive.google.com/drive/folders/1eDECTSbCsBEifBrybGk6zHPwGVDPuBWb%26amp;sa%3DD%26amp;source%3Deditors%26amp;ust%3D1726726417268843%26amp;usg%3DAOvVaw0DHFZuZDX5aqxHaVlicNPL&sa=D&source=docs&ust=1726726417310824&usg=AOvVaw2VtkGvfETRGDFMHM9rzrG0" }
+        ];
+
+        const container = document.getElementById('courses-container');
+
+        courses.forEach(course => {
+            const div = document.createElement('div');
+            div.className = 'course';
+            div.innerHTML = `
+            <img src="${course.img}" alt="${course.name}">
+            <h3>${course.name}</h3>
+            <button onclick="window.open('${course.link}', '_blank')">Open Course</button>
+        `;
+            container.appendChild(div);
+        });
+    });
+</script>
